@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+  int n,i,j,n1=0,n2=1,t,temp,rem;
+  printf("pls enter the series upto whivh you want to check");
+  scanf("%d",&n);
+  for(i=0;i<=n;i++)
+  {
+    t=n2+n1;
+    n1=n2;
+    n2=t;
+    temp=t;
+    int pro=1;
+    while(t>0)
+    {
+      rem=t%10;
+      pro=pro*rem;
+      t=t/10;
+    }
+    for(j=2;j<pro;j++)
+    {
+      if(pro%j==0)
+      {
+        break;
+      }
+    }
+    if(j==pro)
+    {
+      printf("%d\n",temp);
+    }
+  }
+}
