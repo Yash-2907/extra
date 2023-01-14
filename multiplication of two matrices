@@ -1,0 +1,62 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,x,y,z,n,m,k,l,p,q,a=1,b=0,temp=0;
+    int sum=0;
+    printf("PLS ENTER DIMENSIONS n*m OF FIRST MATRIX :-");
+    scanf("%d%d",&n,&m);
+    int arr1[n][m];
+    printf("PLS ENTER ELEMENT OF FIRST MATRIX :- ");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<m;j++)
+        {
+            scanf("%d",&arr1[i][j]);
+        }
+    }
+    printf("PLS ENTER DIMENSIONS k*l OF SECOND MATRIX :-");
+    scanf("%d%d",&k,&l);
+    int arr2[k][l];
+    printf("PLS ENTER ELEMENT OF SECOND MATRIX :- ");
+    for(i=0;i<k;i++)
+    {
+        for(j=0;j<l;j++)
+        {
+            scanf("%d",&arr2[i][j]);
+        }
+    }
+    int arr3[n][l];
+    p=n;
+    q=l;
+    if(m==l)
+    {
+          for(x=0;x<p;x++)
+          { 
+            for(y=0;y<q;y++)
+            {
+              for(z=0;z<k;z++)
+              {
+               temp=((arr1[x][z])*(arr2[z][y]));
+               sum=sum+temp;
+              }
+            arr3[x][y]=sum;
+            sum=0;
+            }
+            
+      }
+     printf("MULTIPLICATION OF ENTERED MATRIX IS :- \n");
+     for(i=0;i<n;i++)
+     {
+        for(j=0;j<l;j++)
+        {
+            printf("%d ",arr3[i][j]);
+        }
+        printf("\n");
+     }
+     
+    }
+    else{
+        printf("THE GIVEN MATRICES CANNOT BE MULTIPLIED AS NO. OF COLUMNS OF 1ST MATRIX IS NOT EQUAL TO ROWS OF 2ND MATRIX");
+    }
+return 0;
+}
