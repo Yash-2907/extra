@@ -28,7 +28,7 @@ int main()
     int arr3[n][l];
     p=n;
     q=l;
-    if(m==l)
+    if(m==k)
     {
           for(x=0;x<p;x++)
           { 
