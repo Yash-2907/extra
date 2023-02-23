@@ -1,0 +1,42 @@
+#include<stdio.h>
+int check(int);
+int main()
+{
+  int n;
+  printf("pls enter the number you want to check :- ");
+  scanf("%d",&n);
+  int ans=check(n);
+  printf("%d",ans);
+  return 0;
+}
+int check(int x)
+{
+  int f=0,s=1,t=0,count=0;
+  if(x<0)
+  {
+   return 0;
+  }
+  else if(x==1||x==0)
+  {
+   return 1;
+  }
+  else{
+    while(t<=x)
+    {
+      t=f+s;
+      if(t==x)
+      {
+        count=1;
+      }
+      f=s;
+      s=t;
+    }
+    if(count==1)
+    {
+      return 1;
+    }
+    else{
+      return 0;
+    }
+   }
+}
