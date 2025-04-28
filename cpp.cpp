@@ -14,8 +14,8 @@ int main(){
         system("git add .");
         system("git commit -m \"this is push from cpp\"");
         system("git push origin main");
-        usleep(5000000);
-        cout << "done push " << "i " << "...";
+        usleep(10000000);
+        cout << "done push " << i << "...";
     }
     return 0;
 }
