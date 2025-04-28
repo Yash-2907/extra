@@ -5,9 +5,7 @@
 using namespace std;
 int main()
 {
-    int tot;
-    cout << "Kitne push karna hai : ";
-    cin >> tot;
+    int tot=3;
     for (int i = 0; i < tot; i++)
     {
         ofstream f("temp.txt", ios::app);
