@@ -1,6 +1,7 @@
 #include<iostream>
 #include<cstdlib>
 #include<fstream>
+#include<unistd.h>
 using namespace std;
 int main(){
     int tot;
@@ -13,6 +14,7 @@ int main(){
         system("git add .");
         system("git commit -m \"this is push from cpp\"");
         system("git push origin main");
+        usleep(5000000);
         cout << "done push " << "i " << "...";
     }
     return 0;
