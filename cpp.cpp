@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <fstream>
-#include <unistd.h> // For sleep function
+#include <unistd.h> // For sleep function on Linux/macOS
 using namespace std;
 
 int main()
@@ -12,8 +12,9 @@ int main()
 
     for (int i = 0; i < tot; i++)
     {
-        // Open temp.txt and close it immediately (this is your file write step)
-        ofstream f("temp.txt");
+        // Open temp.txt and write a random number along with iteration number for uniqueness
+        ofstream f("temp.txt", ios::app); // Open in append mode
+        f << "Random number: " << rand() << " (Commit " << i << ")" << endl;
         f.close();
 
         // Git commands
@@ -22,7 +23,7 @@ int main()
         system("git push origin main");
 
         // Sleep for 10 seconds
-        sleep(10); // Sleep for 10 seconds (Unix-based systems)
+        sleep(5); // Sleep for 10 seconds (Unix-based systems)
 
         cout << "Done push " << i + 1 << "..." << endl;
     }
