@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     int tot;
-    cout << "Enter number of commits to put in: ";
+    cout << "Kitne push karna hai : ";
     cin >> tot;
     for (int i = 0; i < tot; i++)
     {
@@ -16,7 +16,7 @@ int main()
         system("git add .");
         system(("git commit -m \"Commit number " + to_string(i) + "\"").c_str());
         system("git push origin main");
-        sleep(5);
+        sleep(3);
         cout << "Done push " << i + 1 << "..." << endl;
     }
     return 0;
