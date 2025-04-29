@@ -5,7 +5,7 @@
 using namespace std;
 int main()
 {
-    int tot=5;
+    int tot=3;
     for (int i = 0; i < tot; i++)
     {
         ofstream f("temp.txt", ios::app);
@@ -14,7 +14,7 @@ int main()
         system("git add .");
         system(("git commit -m \"Commit number " + to_string(i) + "\"").c_str());
         system("git push origin main");
-        sleep(5);
+        sleep(3);
         cout << "Done push " << i + 1 << "..." << endl;
     }
     return 0;
