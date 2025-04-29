@@ -5,7 +5,7 @@
 using namespace std;
 int main()
 {
-    int tot=12;
+    int tot=5;
     for (int i = 0; i < tot; i++)
     {
         ofstream f("temp.txt", ios::app);
