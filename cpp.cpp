@@ -11,11 +11,10 @@ int main()
         ofstream f("temp.txt", ios::app);
         f << "Adding a new line and number , Random number: " << rand() << " (Commit " << i << ")" << endl;
         f.close();
-        sleep(2);
         system("git add .");
         system(("git commit -m \"Commit number " + to_string(i) + "\"").c_str());
         system("git push origin main");
-        sleep(2);
+        sleep(5);
         cout << "Done push " << i + 1 << "..." << endl;
     }
     return 0;
